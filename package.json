@@ -15,7 +15,7 @@
   "type": "module",
   "main": "backend/src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node backend/src/index.js",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
