@@ -32,5 +32,19 @@ const registerUser = async (req, res) => {
       .json({ message: "internal server error", error: error.message });
   }
 };
-
+const loginUser = async (req, res) => {
+    try {
+        const {email, password} = req.body;
+        const user = User.findOne({
+            email : email.toLowerCase(),
+        });
+        if(!user) {
+            return res.status(400).json({
+                message: "user not found"
+            });
+        }
+    } catch (error) {
+        
+    }
+}
 export { registerUser };
